@@ -102,7 +102,7 @@
 	</properties>
   
   <modules>
-    <module>../couchdb-maven-plugin</module>
+    <module>couchdb-maven-plugin</module>
   </modules>
 
 	<build>
