@@ -79,7 +79,7 @@
 		<docbook.target.directory>${project.build.directory}/docbook</docbook.target.directory>
 		<shared.resources.directory>${project.build.directory}/etc</shared.resources.directory>
 
-		<org.dthume.dthume-docbook.version>0.1-SNAPSHOT</org.dthume.dthume-docbook.version>
+		<org.dthume.dthume-shared-resources.version>0.1-SNAPSHOT</org.dthume.dthume-shared-resources.version>
 
 		<!-- Plugin versioning -->
 		<com.agilejava.docbkx.docbkx-maven-plugin.version>2.0.10</com.agilejava.docbkx.docbkx-maven-plugin.version>
@@ -113,7 +113,7 @@
 							<artifactItem>
 								<groupId>org.dthume</groupId>
 								<artifactId>dthume-shared-resources</artifactId>
-								<version>${org.dthume.dthume-docbook.version}</version>
+								<version>${org.dthume.dthume-shared-resources.version}</version>
 								<type>jar</type>
 								<overWrite>false</overWrite>
 								<outputDirectory>${shared.resources.directory}</outputDirectory>
