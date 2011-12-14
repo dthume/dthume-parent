@@ -1,3 +1,6 @@
 [submodule "couchdb-maven-plugin"]
 	path = couchdb-maven-plugin
 	url = git://github.com/dthume/couchdb-maven-plugin.git
+[submodule "spring-http-httpcomponents"]
+	path = spring-http-httpcomponents
+	url = git://github.com/dthume/spring-http-httpcomponents.git
