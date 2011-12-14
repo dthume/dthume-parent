@@ -48,7 +48,7 @@
       <id>dthu.me.web</id>
       <name>org.dthume Maven Website</name>
       <url>
-        file://opt/maven/sites/org/dthume/${project.artifactId}/${project.version}/
+        file:///opt/maven/sites/org/dthume/${project.artifactId}/${project.version}/
       </url>
     </site>
   </distributionManagement>
