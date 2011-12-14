@@ -347,6 +347,15 @@
               </plugin>
             </reportPlugins>
           </configuration>
+          <executions>
+            <execution>
+              <id>attach-site-descriptor</id>
+              <phase>package</phase>
+              <goals>
+                <goal>attach-descriptor</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
