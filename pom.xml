@@ -103,6 +103,7 @@
 
   <modules>
     <module>couchdb-maven-plugin</module>
+    <module>spring-http-httpcomponents</module>
   </modules>
 
   <dependencies>
