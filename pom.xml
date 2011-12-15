@@ -118,6 +118,7 @@
           <remoteTagging>false</remoteTagging>
           <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
           <localCheckout>true</localCheckout>
+          <goals>deploy site site:deploy</goals>
         </configuration>
       </plugin>
       <plugin>
