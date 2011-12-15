@@ -14,7 +14,7 @@
 
   <name>org.dthume Parent</name>
   <inceptionYear>2011</inceptionYear>
-  <url>https://dthume.github.com/dthume-parent</url>
+  <url>https://dthume.github.com/dthume-parent/</url>
 
   <description>
     org.dthume parent project
@@ -29,7 +29,8 @@
 
   <scm>
     <connection>scm:git:git://github.com/dthume/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:dthume/dthume-parent.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:dthume/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/dthume/${project.artifactId}</url>
   </scm>
 
   <issueManagement>
