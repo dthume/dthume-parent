@@ -115,10 +115,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>${org.apache.maven.plugins.maven-release-plugin.version}</version>
         <configuration>
-          <remoteTagging>false</remoteTagging>
-          <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
           <localCheckout>true</localCheckout>
-          <goals>deploy site site:deploy</goals>
         </configuration>
       </plugin>
       <plugin>
