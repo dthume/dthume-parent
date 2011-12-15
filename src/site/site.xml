@@ -16,11 +16,25 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+<project xmlns="http://maven.apache.org/DECORATION/1.1.0"
+  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="
-    http://maven.apache.org/DECORATION/1.0.0
-    http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+    http://maven.apache.org/DECORATION/1.1.0
+    http://maven.apache.org/xsd/decoration-1.1.0.xsd">
+  
+  <!--
+    Commented out until a new version of the site plugin is released as per:
+    https://jira.codehaus.org/browse/DOXIASITETOOLS-61?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&amp;focusedCommentId=271678#comment-271678
+  <googleAnalyticsAccountId>UA-23302214-1</googleAnalyticsAccountId>
+   -->
+  <!-- 
+  <skin>
+    <groupId>org.dthume</groupId>
+    <artifactId>dthume-site-skin</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </skin>
+  --> 
   <body>
     <menu ref="parent" inherit="bottom" />
     <menu ref="modules" inherit="bottom" />
