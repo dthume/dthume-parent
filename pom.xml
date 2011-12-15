@@ -121,6 +121,8 @@
         <version>${org.apache.maven.plugins.maven-release-plugin.version}</version>
         <configuration>
           <pushChanges>false</pushChanges>
+          <remoteTagging>false</remoteTagging>
+          <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
         </configuration>
       </plugin>
       <plugin>
