@@ -219,7 +219,7 @@
                     <artifactId>xml-maven-plugin</artifactId>
                     <versionRange>[${org.codehaus.mojo.xml-maven-plugin.version},)</versionRange>
                     <goals>
-                      <goal>unpack-dependencies</goal>
+                      <goal>transform</goal>
                     </goals>
                   </pluginExecutionFilter>
                   <action>
