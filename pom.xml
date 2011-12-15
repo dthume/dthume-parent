@@ -114,7 +114,7 @@
         <version>${org.apache.maven.plugins.maven-release-plugin.version}</version>
         <configuration>
           <localCheckout>true</localCheckout>
-          <goals>deploy site</goals>
+          <goals>deploy site com.github.github:site-maven-plugin:site</goals>
         </configuration>
       </plugin>
       <plugin>
