@@ -34,7 +34,7 @@
 
   <scm>
     <connection>scm:git:git://github.com/dthume/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git://github.com:dthume/dthume-parent.git</developerConnection>
+    <developerConnection>scm:git:git://github.com/dthume/dthume-parent.git</developerConnection>
     <url>https://github.com/dthume/${project.artifactId}</url>
   </scm>
 
