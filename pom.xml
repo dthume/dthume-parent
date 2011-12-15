@@ -123,6 +123,7 @@
           <pushChanges>false</pushChanges>
           <remoteTagging>false</remoteTagging>
           <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
+          <localCheckout>true</localCheckout>
         </configuration>
       </plugin>
       <plugin>
