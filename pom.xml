@@ -9,7 +9,7 @@
 
   <groupId>org.dthume</groupId>
   <artifactId>dthume-parent</artifactId>
-  <version>0.2</version>
+  <version>0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>org.dthume Parent</name>
