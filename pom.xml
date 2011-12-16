@@ -88,6 +88,7 @@
     <com.mycila.maven-license-plugin.version>1.9.0</com.mycila.maven-license-plugin.version>
     <net.sf.xslthl.version>2.0.2</net.sf.xslthl.version>
     <org.apache.maven.plugins.maven-changes-plugin.version>2.6</org.apache.maven.plugins.maven-changes-plugin.version>
+    <org.apache.maven.plugins.maven-changelog-plugin>2.2</org.apache.maven.plugins.maven-changelog-plugin>
     <org.apache.maven.plugins.maven-checkstyle-plugin.version>2.8</org.apache.maven.plugins.maven-checkstyle-plugin.version>
     <org.apache.maven.plugins.maven-compiler-plugin.version>2.3.2</org.apache.maven.plugins.maven-compiler-plugin.version>
     <org.apache.maven.plugins.maven-dependency-plugin.version>2.4</org.apache.maven.plugins.maven-dependency-plugin.version>
@@ -148,6 +149,11 @@
                 <dependencyDetailsEnabled>false</dependencyDetailsEnabled>
                 <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
               </configuration>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-changelog-plugin</artifactId>
+              <version>${org.apache.maven.plugins.maven-changelog-plugin}</version>
             </plugin>
           </reportPlugins>
         </configuration>
