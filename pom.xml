@@ -114,10 +114,6 @@
         <version>${org.apache.maven.plugins.maven-release-plugin.version}</version>
         <configuration>
           <localCheckout>true</localCheckout>
-          <arguments>
-            -Dgithub.global.password=${github.global.password}
-            -Dgithub.global.userName=${github.global.userName} 
-          </arguments>
           <goals>deploy site com.github.github:site-maven-plugin:site</goals>
         </configuration>
       </plugin>
