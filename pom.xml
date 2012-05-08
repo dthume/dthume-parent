@@ -74,7 +74,6 @@
       <organization>Kana</organization>
       <organizationUrl>http://www.kana.com</organizationUrl>
       <roles>
-        <role>architect</role>
         <role>developer</role>
       </roles>
       <timezone>0</timezone>
@@ -314,6 +313,7 @@
                     <versionRange>[${org.apache.maven.plugins.maven-dependency-plugin.version},)</versionRange>
                     <goals>
                       <goal>unpack-dependencies</goal>
+                      <goal>unpack</goal>
                     </goals>
                   </pluginExecutionFilter>
                   <action>
