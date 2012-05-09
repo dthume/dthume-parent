@@ -371,4 +371,14 @@
       </plugins>
     </pluginManagement>
   </build>
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.jfrog.maven.annomojo</groupId>
+        <artifactId>maven-plugin-anno</artifactId>
+        <version>${org.jfrog.maven.annomojo.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
