@@ -110,9 +110,10 @@
     <org.apache.maven.plugins.maven-site-plugin.version>3.0</org.apache.maven.plugins.maven-site-plugin.version>
     <org.apache.maven.plugins.maven-source-plugin.version>2.1.2</org.apache.maven.plugins.maven-source-plugin.version>
     <org.apache.maven.plugins.maven-surefire-report-plugin.version>2.10</org.apache.maven.plugins.maven-surefire-report-plugin.version>
-    <org.codehaus.mojo.buildnumber-maven-plugin.version>1.0</org.codehaus.mojo.buildnumber-maven-plugin.version>
+    <org.codehaus.mojo.buildnumber-maven-plugin.version>1.1</org.codehaus.mojo.buildnumber-maven-plugin.version>
     <org.codehaus.mojo.xml-maven-plugin.version>1.0</org.codehaus.mojo.xml-maven-plugin.version>
     <org.eclipse.m2e.lifecycle-mapping>1.0.0</org.eclipse.m2e.lifecycle-mapping>
+    <org.jfrog.maven.annomojo.version>1.4.1</org.jfrog.maven.annomojo.version>
   </properties>
   
   <build>
@@ -230,6 +231,14 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
           <version>${org.apache.maven.plugins.maven-plugin-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.jfrog.maven.annomojo</groupId>
+              <artifactId>maven-plugin-tools-anno</artifactId>
+              <version>${org.jfrog.maven.annomojo.version}</version>
+              <scope>runtime</scope>
+            </dependency>
+          </dependencies>
         </plugin>        
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
