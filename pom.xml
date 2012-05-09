@@ -110,6 +110,7 @@
     <org.apache.maven.plugins.maven-site-plugin.version>3.0</org.apache.maven.plugins.maven-site-plugin.version>
     <org.apache.maven.plugins.maven-source-plugin.version>2.1.2</org.apache.maven.plugins.maven-source-plugin.version>
     <org.apache.maven.plugins.maven-surefire-report-plugin.version>2.10</org.apache.maven.plugins.maven-surefire-report-plugin.version>
+    <org.codehaus.gmaven-plugin.version>1.4</org.codehaus.gmaven-plugin.version>
     <org.codehaus.mojo.buildnumber-maven-plugin.version>1.1</org.codehaus.mojo.buildnumber-maven-plugin.version>
     <org.codehaus.mojo.xml-maven-plugin.version>1.0</org.codehaus.mojo.xml-maven-plugin.version>
     <org.eclipse.m2e.lifecycle-mapping>1.0.0</org.eclipse.m2e.lifecycle-mapping>
@@ -198,64 +199,6 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-project-info-reports-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>buildnumber-maven-plugin</artifactId>
-          <version>${org.codehaus.mojo.buildnumber-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>xml-maven-plugin</artifactId>
-          <version>${org.codehaus.mojo.xml-maven-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.mycila.maven-license-plugin</groupId>
-          <artifactId>maven-license-plugin</artifactId>
-          <version>${com.mycila.maven-license-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-dependency-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-plugin-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-plugin-plugin.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.jfrog.maven.annomojo</groupId>
-              <artifactId>maven-plugin-tools-anno</artifactId>
-              <version>${org.jfrog.maven.annomojo.version}</version>
-              <scope>runtime</scope>
-            </dependency>
-          </dependencies>
-        </plugin>        
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-source-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-jar-plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-javadoc-plugin.version}</version>
-        </plugin>
-        <plugin>
           <groupId>com.agilejava.docbkx</groupId>
           <artifactId>docbkx-maven-plugin</artifactId>
           <version>${com.agilejava.docbkx.docbkx-maven-plugin.version}</version>
@@ -269,9 +212,19 @@
           </dependencies>
         </plugin>
         <plugin>
+          <groupId>com.mycila.maven-license-plugin</groupId>
+          <artifactId>maven-license-plugin</artifactId>
+          <version>${com.mycila.maven-license-plugin.version}</version>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>${org.apache.maven.plugins.maven-site-plugin.version}</version>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-dependency-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -283,12 +236,81 @@
           </configuration>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-jar-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-javadoc-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-plugin-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-plugin-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.jfrog.maven.annomojo</groupId>
+              <artifactId>maven-plugin-tools-anno</artifactId>
+              <version>${org.jfrog.maven.annomojo.version}</version>
+              <scope>runtime</scope>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-project-info-reports-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-site-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-source-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.gmaven</groupId>
+          <artifactId>gmaven-plugin</artifactId>
+          <version>${org.codehaus.gmaven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>${org.codehaus.mojo.buildnumber-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>xml-maven-plugin</artifactId>
+          <version>${org.codehaus.mojo.xml-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
           <version>${org.eclipse.m2e.lifecycle-mapping}</version>
           <configuration>
             <lifecycleMappingMetadata>
               <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.codehaus.gmaven</groupId>
+                    <artifactId>gmaven-plugin</artifactId>
+                    <versionRange>[${org.codehaus.gmaven-plugin.version},)</versionRange>
+                    <goals>
+                      <goal>generateStubs</goal>
+                      <goal>compile</goal>
+                      <goal>generateTestStubs</goal>
+                      <goal>testCompile</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore />
+                  </action>
+                </pluginExecution>
                 <pluginExecution>
                   <pluginExecutionFilter>
                     <groupId>org.codehaus.mojo</groupId>
