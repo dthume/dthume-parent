@@ -255,14 +255,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
           <version>${org.apache.maven.plugins.maven-plugin-plugin.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.jfrog.maven.annomojo</groupId>
-              <artifactId>maven-plugin-tools-anno</artifactId>
-              <version>${org.jfrog.maven.annomojo.version}</version>
-              <scope>runtime</scope>
-            </dependency>
-          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -377,30 +369,5 @@
       </plugins>
     </pluginManagement>
   </build>
-  
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.jfrog.maven.annomojo</groupId>
-        <artifactId>maven-plugin-anno</artifactId>
-        <version>${org.jfrog.maven.annomojo.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-  
-  <repositories>
-    <repository>
-      <id>jfrog-plugins</id>
-      <name>jfrog-plugins-dist</name>
-      <url>http://repo.jfrog.org/artifactory/plugins-releases</url>
-    </repository>
-  </repositories>
-  
-  <pluginRepositories>
-    <pluginRepository>
-      <id>jfrog-plugins</id>
-      <name>jfrog-plugins-dist</name>
-      <url>http://repo.jfrog.org/artifactory/plugins-releases</url>
-    </pluginRepository>
-  </pluginRepositories>
+
 </project>
