@@ -132,6 +132,10 @@
             </goals>
             <configuration>
               <rules combine.children="append">
+                <requireJavaVersion>
+                  <message>JDK 1.6+ is required to build</message>
+                  <version>[1.6,)</version>
+                </requireJavaVersion>
                 <requirePluginVersions />
               </rules>
             </configuration>
