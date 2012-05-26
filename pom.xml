@@ -108,6 +108,7 @@
     <org.apache.maven.plugins.maven-pmd-plugin.version>2.6</org.apache.maven.plugins.maven-pmd-plugin.version>
     <org.apache.maven.plugins.maven-project-info-reports-plugin.version>2.4</org.apache.maven.plugins.maven-project-info-reports-plugin.version>
     <org.apache.maven.plugins.maven-release-plugin.version>2.2.2</org.apache.maven.plugins.maven-release-plugin.version>
+    <org.apache.maven.plugins.maven-shade-plugin.version>1.6</org.apache.maven.plugins.maven-shade-plugin.version>
     <org.apache.maven.plugins.maven-site-plugin.version>3.0</org.apache.maven.plugins.maven-site-plugin.version>
     <org.apache.maven.plugins.maven-source-plugin.version>2.1.2</org.apache.maven.plugins.maven-source-plugin.version>
     <org.apache.maven.plugins.maven-surefire-report-plugin.version>2.10</org.apache.maven.plugins.maven-surefire-report-plugin.version>
@@ -115,6 +116,9 @@
     <org.codehaus.mojo.buildnumber-maven-plugin.version>1.1</org.codehaus.mojo.buildnumber-maven-plugin.version>
     <org.codehaus.mojo.xml-maven-plugin.version>1.0</org.codehaus.mojo.xml-maven-plugin.version>
     <org.eclipse.m2e.lifecycle-mapping>1.0.0</org.eclipse.m2e.lifecycle-mapping>
+    
+    <!-- Dependency Versioning -->
+    <net.sf.saxon.Saxon-HE.version>9.4</net.sf.saxon.Saxon-HE.version>
     <org.jfrog.maven.annomojo.version>1.4.1</org.jfrog.maven.annomojo.version>
   </properties>
   
@@ -268,6 +272,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${org.apache.maven.plugins.maven-shade-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${org.apache.maven.plugins.maven-site-plugin.version}</version>
         </plugin>
@@ -290,6 +299,13 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>xml-maven-plugin</artifactId>
           <version>${org.codehaus.mojo.xml-maven-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>net.sf.saxon</groupId>
+              <artifactId>Saxon-HE</artifactId>
+              <version>${net.sf.saxon.Saxon-HE.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
