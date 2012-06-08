@@ -90,7 +90,6 @@
     <!-- Plugin Versioning -->
     <com.agilejava.docbkx.docbkx-maven-plugin.version>2.0.13</com.agilejava.docbkx.docbkx-maven-plugin.version>
     <com.github.github.site-maven-plugin.version>0.4</com.github.github.site-maven-plugin.version>
-    <com.mycila.maven-license-plugin.version>1.9.0</com.mycila.maven-license-plugin.version>
     <net.sf.xslthl.version>2.0.2</net.sf.xslthl.version>
     <org.apache.maven.plugins.maven-changes-plugin.version>2.6</org.apache.maven.plugins.maven-changes-plugin.version>
     <org.apache.maven.plugins.maven-changelog-plugin>2.2</org.apache.maven.plugins.maven-changelog-plugin>
@@ -113,7 +112,9 @@
     <org.apache.maven.plugins.maven-source-plugin.version>2.1.2</org.apache.maven.plugins.maven-source-plugin.version>
     <org.apache.maven.plugins.maven-surefire-report-plugin.version>2.10</org.apache.maven.plugins.maven-surefire-report-plugin.version>
     <org.codehaus.gmaven-plugin.version>1.4</org.codehaus.gmaven-plugin.version>
+    <org.codehaus.mojo.license-maven-plugin.version>1.1</org.codehaus.mojo.license-maven-plugin.version>
     <org.codehaus.mojo.buildnumber-maven-plugin.version>1.1</org.codehaus.mojo.buildnumber-maven-plugin.version>
+    <org.codehaus.plexus.plexus-component-metadata.version>1.5.5</org.codehaus.plexus.plexus-component-metadata.version>
     <org.codehaus.mojo.xml-maven-plugin.version>1.0</org.codehaus.mojo.xml-maven-plugin.version>
     <org.eclipse.m2e.lifecycle-mapping>1.0.0</org.eclipse.m2e.lifecycle-mapping>
     
@@ -227,11 +228,6 @@
           </dependencies>
         </plugin>
         <plugin>
-          <groupId>com.mycila.maven-license-plugin</groupId>
-          <artifactId>maven-license-plugin</artifactId>
-          <version>${com.mycila.maven-license-plugin.version}</version>
-        </plugin>
-        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
@@ -297,6 +293,11 @@
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${org.codehaus.mojo.license-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
           <artifactId>xml-maven-plugin</artifactId>
           <version>${org.codehaus.mojo.xml-maven-plugin.version}</version>
           <dependencies>
@@ -306,6 +307,11 @@
               <version>${net.sf.saxon.Saxon-HE.version}</version>
             </dependency>
           </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.plexus</groupId>
+          <artifactId>plexus-component-metadata</artifactId>
+          <version>${org.codehaus.plexus.plexus-component-metadata.version}</version>
         </plugin>
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
@@ -333,10 +339,36 @@
                 <pluginExecution>
                   <pluginExecutionFilter>
                     <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <versionRange>[${org.codehaus.mojo.buildnumber-maven-plugin.version},)</versionRange>
+                    <goals>
+                      <goal>create-timestamp</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore />
+                  </action>
+                </pluginExecution>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.codehaus.mojo</groupId>
                     <artifactId>xml-maven-plugin</artifactId>
                     <versionRange>[${org.codehaus.mojo.xml-maven-plugin.version},)</versionRange>
                     <goals>
                       <goal>transform</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore />
+                  </action>
+                </pluginExecution>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.codehaus.plexus</groupId>
+                    <artifactId>plexus-component-metadata</artifactId>
+                    <versionRange>[${org.codehaus.plexus.plexus-component-metadata.version},)</versionRange>
+                    <goals>
+                      <goal>generate-metadata</goal>
                     </goals>
                   </pluginExecutionFilter>
                   <action>
@@ -364,19 +396,6 @@
                     <goals>
                       <goal>unpack-dependencies</goal>
                       <goal>unpack</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore />
-                  </action>
-                </pluginExecution>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>com.mycila.maven-license-plugin</groupId>
-                    <artifactId>maven-license-plugin</artifactId>
-                    <versionRange>[${com.mycila.maven-license-plugin.maven-license-plugin.version},)</versionRange>
-                    <goals>
-                      <goal>check</goal>
                     </goals>
                   </pluginExecutionFilter>
                   <action>
