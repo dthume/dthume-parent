@@ -102,7 +102,7 @@
     <org.apache.maven.plugins.maven-jar-plugin.version>2.3.2</org.apache.maven.plugins.maven-jar-plugin.version>
     <org.apache.maven.plugins.maven-javadoc-plugin.version>2.8</org.apache.maven.plugins.maven-javadoc-plugin.version>
     <org.apache.maven.plugins.maven-jxr-plugin.version>2.3</org.apache.maven.plugins.maven-jxr-plugin.version>
-    <org.apache.maven.plugins.maven-invoker-plugin.version>1.5</org.apache.maven.plugins.maven-invoker-plugin.version>
+    <org.apache.maven.plugins.maven-invoker-plugin.version>1.6</org.apache.maven.plugins.maven-invoker-plugin.version>
     <org.apache.maven.plugins.maven-plugin-plugin.version>2.9</org.apache.maven.plugins.maven-plugin-plugin.version>
     <org.apache.maven.plugins.maven-pmd-plugin.version>2.6</org.apache.maven.plugins.maven-pmd-plugin.version>
     <org.apache.maven.plugins.maven-project-info-reports-plugin.version>2.4</org.apache.maven.plugins.maven-project-info-reports-plugin.version>
@@ -111,6 +111,7 @@
     <org.apache.maven.plugins.maven-site-plugin.version>3.0</org.apache.maven.plugins.maven-site-plugin.version>
     <org.apache.maven.plugins.maven-source-plugin.version>2.1.2</org.apache.maven.plugins.maven-source-plugin.version>
     <org.apache.maven.plugins.maven-surefire-report-plugin.version>2.10</org.apache.maven.plugins.maven-surefire-report-plugin.version>
+    <org.codehaus.groovy.groovy-eclipse-compiler.version>2.6.0-01</org.codehaus.groovy.groovy-eclipse-compiler.version>
     <org.codehaus.gmaven-plugin.version>1.4</org.codehaus.gmaven-plugin.version>
     <org.codehaus.mojo.license-maven-plugin.version>1.1</org.codehaus.mojo.license-maven-plugin.version>
     <org.codehaus.mojo.buildnumber-maven-plugin.version>1.1</org.codehaus.mojo.buildnumber-maven-plugin.version>
@@ -231,6 +232,13 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.codehaus.groovy</groupId>
+              <artifactId>groovy-eclipse-compiler</artifactId>
+              <version>${org.codehaus.groovy.groovy-eclipse-compiler.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -280,6 +288,12 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>${org.apache.maven.plugins.maven-source-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.groovy</groupId>
+          <artifactId>groovy-eclipse-compiler</artifactId>
+          <version>${org.codehaus.groovy.groovy-eclipse-compiler.version}</version>
+          <extensions>true</extensions>
         </plugin>
         <plugin>
           <groupId>org.codehaus.gmaven</groupId>
