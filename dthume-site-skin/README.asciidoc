@@ -1,0 +1,10 @@
+dthume Site Skin
+==========================
+David Thomas Hume
+:Author Initials: DTH
+
+Skin for project sites under the org.dthume group.
+
+Maven generated project sites are available for the latest
+http://dthume.github.com/dthume-site-skin/[release] and
+http://dthu.me/projects/dthume-site-skin/[snapshot] versions.

@@ -114,8 +114,9 @@
     <org.codehaus.gmaven-plugin.version>1.4</org.codehaus.gmaven-plugin.version>
     <org.codehaus.mojo.license-maven-plugin.version>1.1</org.codehaus.mojo.license-maven-plugin.version>
     <org.codehaus.mojo.buildnumber-maven-plugin.version>1.1</org.codehaus.mojo.buildnumber-maven-plugin.version>
-    <org.codehaus.plexus.plexus-component-metadata.version>1.5.5</org.codehaus.plexus.plexus-component-metadata.version>
+    <org.codehaus.mojo.sonar-maven-plugin.version>2.0</org.codehaus.mojo.sonar-maven-plugin.version>
     <org.codehaus.mojo.xml-maven-plugin.version>1.0</org.codehaus.mojo.xml-maven-plugin.version>
+    <org.codehaus.plexus.plexus-component-metadata.version>1.5.5</org.codehaus.plexus.plexus-component-metadata.version>
     <org.eclipse.m2e.lifecycle-mapping>1.0.0</org.eclipse.m2e.lifecycle-mapping>
     <org.jacoco.jacoco-maven-plugin.version>0.5.8-SNAPSHOT</org.jacoco.jacoco-maven-plugin.version>
     
@@ -318,6 +319,11 @@
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>${org.codehaus.mojo.sonar-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
           <artifactId>xml-maven-plugin</artifactId>
           <version>${org.codehaus.mojo.xml-maven-plugin.version}</version>
           <dependencies>
@@ -447,4 +453,10 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <modules>
+    <module>dthume-shared-resources</module>
+    <module>dthume-site-skin</module>
+    <module>dthume-public</module>
+  </modules>
 </project>
