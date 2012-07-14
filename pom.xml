@@ -118,7 +118,7 @@
     <org.codehaus.mojo.xml-maven-plugin.version>1.0</org.codehaus.mojo.xml-maven-plugin.version>
     <org.codehaus.plexus.plexus-component-metadata.version>1.5.5</org.codehaus.plexus.plexus-component-metadata.version>
     <org.eclipse.m2e.lifecycle-mapping>1.0.0</org.eclipse.m2e.lifecycle-mapping>
-    <org.jacoco.jacoco-maven-plugin.version>0.5.8-SNAPSHOT</org.jacoco.jacoco-maven-plugin.version>
+    <org.jacoco.jacoco-maven-plugin.version>0.5.8.201207111220</org.jacoco.jacoco-maven-plugin.version>
     
     <!-- Dependency Versioning -->
     <net.sf.saxon.Saxon-HE.version>9.4</net.sf.saxon.Saxon-HE.version>
@@ -455,6 +455,7 @@
   </build>
 
   <modules>
+    <module>dthume-jar-archetype</module>
     <module>dthume-shared-resources</module>
     <module>dthume-site-skin</module>
     <module>dthume-public</module>

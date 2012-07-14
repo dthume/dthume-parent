@@ -29,7 +29,7 @@
   <skin>
     <groupId>org.dthume</groupId>
     <artifactId>dthume-site-skin</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>${project.version}</version>
   </skin>
 
 </project>

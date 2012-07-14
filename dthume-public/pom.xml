@@ -12,30 +12,14 @@
 
   <artifactId>dthume-public</artifactId>
   <packaging>pom</packaging>
-  <version>0.2-SNAPSHOT</version>
 
   <name>org.dthume Public</name>
   <inceptionYear>2011</inceptionYear>
-  <url>http://dthume.github.com/${project.artifactId}/</url>
 
   <description>
     org.dthume parent for public projects
   </description>
   
-  <scm>
-    <connection>scm:git:git://github.com/dthume/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:dthume/${project.artifactId}.git</developerConnection>
-    <url>https://github.com/dthume/${project.artifactId}</url>
-  </scm>
-  
-  <distributionManagement>
-    <site>
-      <id>dthu.me.web</id>
-      <name>org.dthume Maven Website</name>
-      <url>https://github.com/dthume/${project.artifactId}/</url>
-    </site>
-  </distributionManagement>
-
   <properties>
     <docbook.target.directory>${project.build.directory}/docbook</docbook.target.directory>
 
@@ -44,7 +28,7 @@
     
     <shared.resources.groupId>org.dthume</shared.resources.groupId>
     <shared.resources.artifactId>dthume-shared-resources</shared.resources.artifactId>
-    <shared.resources.version>${org.dthume.dthume-shared-resources.version}</shared.resources.version>
+    <shared.resources.version>0.3-SNAPSHOT</shared.resources.version>
     <shared.resources.type>jar</shared.resources.type>
 
     <org.dthume.etc>${shared.resources.directory}/org/dthume/etc</org.dthume.etc>
@@ -65,7 +49,6 @@
     <!-- Dependency Versioning -->
     <org.apache.commons.commons-lang3.version>3.0.1</org.apache.commons.commons-lang3.version>
     <org.codehaus.groovy.version>1.8.6</org.codehaus.groovy.version>
-    <org.dthume.dthume-shared-resources.version>0.2-SNAPSHOT</org.dthume.dthume-shared-resources.version>
     <org.easymock.version>3.1</org.easymock.version>
     <junit.version>4.10</junit.version>
     <org.mockito.version>1.9.0</org.mockito.version>

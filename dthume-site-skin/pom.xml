@@ -11,12 +11,10 @@
   </parent>
 
   <artifactId>dthume-site-skin</artifactId>
-  <version>0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>org.dthume Site Skin</name>
   <inceptionYear>2011</inceptionYear>
-  <url>http://dthume.github.com/dthume-site-skin/</url>
 
   <description>
     Skin for project sites in the org.dthume group
@@ -27,20 +25,6 @@
     <doxia.resources.directory>org/apache/maven/doxia/siterenderer/resources</doxia.resources.directory>
   </properties>
   
-  <scm>
-    <connection>scm:git:git://github.com/dthume/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:dthume/${project.artifactId}.git</developerConnection>
-    <url>https://github.com/dthume/${project.artifactId}</url>
-  </scm>
-
-  <distributionManagement>
-    <site>
-      <id>dthu.me.web</id>
-      <name>org.dthume Maven Website</name>
-      <url>https://github.com/dthume/${project.artifactId}/</url>
-    </site>
-  </distributionManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.maven.skins</groupId>
