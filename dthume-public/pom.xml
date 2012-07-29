@@ -464,6 +464,9 @@
               <id>default-test</id>
               <configuration>
                 <argLine>${org.jacoco.utArgLine}</argLine>
+                <systemPropertyVariables>
+                  <ut.verbose>${ut.verbose}</ut.verbose>
+                </systemPropertyVariables>
               </configuration>
             </execution>
           </executions>
